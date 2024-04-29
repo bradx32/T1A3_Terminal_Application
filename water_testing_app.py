@@ -2,11 +2,12 @@
 import os.path 
 
 # External packages
+from colored import Fore, Back, Style # Lesson video at 2:34:00 watch from here
 
 # Imports of our own fucntiones
 from menu_functions import add_results, remove_results, mark_results, view_results
 
-print("Welcome to the Water Testing application")
+print(f"{Fore.red}{Back.green}Welcome to the Water Testing application{Style.reset}")
 print("\n")
 
 def create_menu(): # Function #1 
