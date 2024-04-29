@@ -19,17 +19,18 @@ def create_menu(): # Function #1
     user_choice = input("\n Enter your selection: ")
     return user_choice
 
-file_name = "results_list.csv"
+file_name = "aquarium_list.csv"
 
 # if the file does not exist
 if (not os.path.isfile(file_name)):
-    print("A list file was created as it did not exist, this will store your input results")
+    # Display message if file does not exist, gives user more information.
+    print("A list file was created as it did not exist, this will store your Aquarium Name and Date Tested")
     # Create the file
-    todo_file = open(file_name, "w")
+    aquarium_name_file = open(file_name, "w")
     # Enter the headings into the file
-    todo_file.write("title,completed")
+    aquarium_name_file.write("Aquarium Name,Date Tested")
     # Close the file
-    todo_file.close()
+    aquarium_name_file.close()
 
 choice = ""
 
