@@ -28,7 +28,7 @@ if (not os.path.isfile(file_name)):
     # Create the file
     aquarium_name_file = open(file_name, "w")
     # Enter the headings into the file
-    aquarium_name_file.write("Aquarium Name,Date Tested")
+    aquarium_name_file.write("Aquarium Name,Date Tested\n")
     # Close the file
     aquarium_name_file.close()
 
@@ -38,16 +38,16 @@ while choice != "5":
     choice = create_menu()
 
     if (choice == "1"):
-        add_results()
+        add_results(file_name)
 
     elif (choice == "2"):
-        remove_results()
+        remove_results(file_name)
 
     elif (choice == "3"):
-        mark_results()
+        mark_results(file_name)
 
     elif (choice == "4"):
-        view_results()
+        view_results(file_name)
 
     elif (choice == "5"):
         print("You entered 5.")
