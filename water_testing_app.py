@@ -4,6 +4,7 @@ import os.path
 # External packages
 from rich import print # Lesson video at 2:34:00 watch from here if needing help
 
+
 # Imports of our own fucntiones
 from menu_functions import add_results, remove_results, mark_results, view_results
 
@@ -29,7 +30,7 @@ if (not os.path.isfile(file_name)):
     # Create the file
     aquarium_name_file = open(file_name, "w")
     # Enter the headings into the file
-    aquarium_name_file.write("Aquarium Name,Date Tested,PH,Ammonia(PPM),Nitrite(PPM),Nitrate(PPM),GH(PPM),KH(PPM)\n")
+    aquarium_name_file.write("Aquarium Name,Date Tested,PH,Ammonia(PPM),Nitrite(PPM),Nitrate(PPM)\n")
     # Close the file
     aquarium_name_file.close()
 
@@ -57,3 +58,4 @@ while choice != "5":
 
 
 print("Thank you for using the Water Testing application")
+
