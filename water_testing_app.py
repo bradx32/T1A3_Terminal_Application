@@ -2,12 +2,12 @@
 import os.path 
 
 # External packages
-from colored import Fore, Back, Style # Lesson video at 2:34:00 watch from here
+from rich import print # Lesson video at 2:34:00 watch from here if needing help
 
 # Imports of our own fucntiones
 from menu_functions import add_results, remove_results, mark_results, view_results
 
-print(f"{Fore.red}{Back.green}Welcome to the Water Testing application{Style.reset}")
+print("Welcome to the Water Testing application \U0001F9EA \U0001F41F ")
 print("\n")
 
 def create_menu(): # Function #1 
@@ -20,16 +20,16 @@ def create_menu(): # Function #1
     user_choice = input("\n Enter your selection: ")
     return user_choice
 
-file_name = "aquarium_list.csv"
+file_name = "results_table.csv"
 
 # if the file does not exist
 if (not os.path.isfile(file_name)):
     # Display message if file does not exist, gives user more information.
-    print("A list file was created as it did not exist, this will store your Aquarium Name and Date Tested")
+    print("A list file was created as it did not exist, this will store your Aquarium name and results")
     # Create the file
     aquarium_name_file = open(file_name, "w")
     # Enter the headings into the file
-    aquarium_name_file.write("Aquarium Name,Date Tested\n")
+    aquarium_name_file.write("Aquarium Name,Date Tested,PH,Ammonia(PPM),Nitrite(PPM),Nitrate(PPM),GH(PPM),KH(PPM)\n")
     # Close the file
     aquarium_name_file.close()
 
