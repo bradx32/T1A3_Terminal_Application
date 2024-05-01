@@ -6,7 +6,7 @@ from rich import print # Lesson video at 2:34:00 watch from here if needing help
 
 
 # Imports of our own fucntiones
-from menu_functions import add_aquarium, add_test_results, remove_results, view_results
+from menu_functions import add_aquarium, add_test_results, remove_results, view_results, ideal_parameters
 
 print("Welcome to the Aquarium Water Testing results application \U0001F9EA \U0001F41F ")
 print("Here you can name your Aquarium, store, view and remove test results.")
@@ -17,7 +17,8 @@ def create_menu(): # Function #1
     print("2. Enter 2 to add test results to your Aquarium")
     print("2. Enter 3 to remove item from the list")
     print("4. Enter 4 to view Water Testing results")
-    print("5. Enter 5 to exit application")
+    print("5. Enter 5 to view ideal Aquariuam parameters")
+    print("5. Enter 6 to exit application")
 
     user_choice = input("\n Enter your selection: ")
     return user_choice
@@ -37,7 +38,7 @@ if (not os.path.isfile(file_name)):
 
 choice = ""
 
-while choice != "5":
+while choice != "6":
     choice = create_menu()
 
     if (choice == "1"):
@@ -51,9 +52,12 @@ while choice != "5":
 
     elif (choice == "4"):
         view_results(file_name)
+    
+    elif(choice == "5"):
+        ideal_parameters(file_name)
 
-    elif (choice == "5"):
-        print("You entered 5.")
+    elif (choice == "6"):
+        print("You entered 6.")
     else:
         print("Please only enter the options shown above.")
 

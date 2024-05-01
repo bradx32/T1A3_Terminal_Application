@@ -51,6 +51,19 @@ def view_results(file_name):
         print("The results table doesn't exist")
 
 
+def ideal_parameters(file_name):
+    print("\nAustralian Native fish general ideal parameters")
+    ideal_parameters = {
+        "pH": "6.5 - 7.5",
+        "Ammonia": "0 - 0.25ppm",
+        "Nitrite": "0ppm",
+        "Nitrate": "0-40ppm",
+        "Temperature": "24 - 26deg",
+        "GH": "50-150ppm"
+    }
+    for key, value in ideal_parameters.items():
+        print(f"{key}: {value}")
+    print()
 
 
 # def mark_results(file_name):
