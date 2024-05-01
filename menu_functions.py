@@ -7,7 +7,12 @@ def add_aquarium(file_name):
         writer = csv.writer(f)
         writer.writerow([results_name])
 
-
+def add_test_results(file_name):
+    print("For example Ph:, Ammonia: , Nitrite: or Nitrate: ")
+    results_name = input("Enter test results: ")
+    with open(file_name, "a") as f:
+        writer = csv.writer(f)
+        writer.writerow([results_name])
 
 # def add_test_results(file_name):
 #     results_name = {
@@ -23,19 +28,17 @@ def add_aquarium(file_name):
 
 
 
-
-
 def remove_results(file_name):
-    results_name = input("Enter the todo name that you want to delete: ")
+    results_name = input("Enter the results name that you want to delete: ")
     # Create a new list
-    todo_lists = []
+    results_lists = []
     # Put all the previous items into the list except the one they want to delete
     with open(file_name, "r") as f:
         reader = csv.reader(f)
         is_exist = False
         for row in reader:
             if (results_name != row[0]):
-                todo_lists.append(row) 
+                results_lists.append(row) 
             else:
                 is_exist = True
     if not is_exist:
@@ -44,7 +47,7 @@ def remove_results(file_name):
     # Write the enter aquarium_list.csv file with this new list
     with open(file_name, "w") as f:
         writer = csv.writer(f)
-        writer.writerows(todo_lists)
+        writer.writerows(results_lists)
 
 
 def view_results(file_name):
