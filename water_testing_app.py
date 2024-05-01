@@ -9,7 +9,7 @@ from rich import print # Lesson video at 2:34:00 watch from here if needing help
 from menu_functions import add_aquarium, add_test_results, remove_results, view_results
 
 print("Welcome to the Aquarium Water Testing results application \U0001F9EA \U0001F41F ")
-print("Here you can name your Aquarium, store test results and view by date")
+print("Here you can name your Aquarium, store, view and remove test results.")
 print("\n")
 
 def create_menu(): # Function #1 

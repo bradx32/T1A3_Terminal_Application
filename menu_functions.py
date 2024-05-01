@@ -8,24 +8,11 @@ def add_aquarium(file_name):
         writer.writerow([results_name])
 
 def add_test_results(file_name):
-    print("For example Ph:, Ammonia: , Nitrite: or Nitrate: ")
+    print("For example Date:, Ph:, Ammonia: , Nitrite: or Nitrate: ")
     results_name = input("Enter test results: ")
     with open(file_name, "a") as f:
         writer = csv.writer(f)
         writer.writerow([results_name])
-
-# def add_test_results(file_name):
-#     results_name = {
-#         "Date:": input("Enter date: "),
-#         "PH:": input("Enter PH: "),
-#         "Ammonia:": input("Enter Ammonia: "),
-#         "Nitrite:": input("Enter Nitrite: "),
-#         "Nitrate:": input("Enter Nitrate: ")
-#     }
-#     with open(file_name, "a") as f:
-#         writer = csv.writer(f)
-#         writer.writerow([results_name])
-
 
 
 def remove_results(file_name):
@@ -54,11 +41,14 @@ def view_results(file_name):
     try:
         with open(file_name, "r") as f: 
             reader = csv.reader(f)
-            reader.__next__() 
+            reader.__next__()
+            for row in reader:
+                # Concatenate the elements of each row into a single string
+                row_string = "".join(row)
+                # Print the formatted row
+                print(row_string)
     except FileNotFoundError:
-        print("The Aquarium results_table file does not exist.")
-
-
+        print("The results table doesn't exist")
 
 
 
