@@ -3,6 +3,7 @@ import os.path
 
 # External packages
 # Lesson video at 2:34:00 watch from here if needing help
+from colored import Fore, Back, Style
 from rich import print # this overides the 'print' and gives colours to numbers and strings
 from rich.text import Text
 
@@ -10,11 +11,13 @@ from rich.text import Text
 # Imports of our own fucntiones
 from menu_functions import add_aquarium, add_test_results, remove_results, view_results, ideal_parameters
 
+# Title and terminal brief
 print("\n[bold]Welcome to the Aquarium Water Testing results application[/bold] \U0001F9EA \U0001F41F ")
 print("[bold]Here you can name your Aquarium, store, view and remove test results.[/]")
 print("\n")
 
-def create_menu(): # Function #1 
+# Function overview and user guide
+def create_menu():  
     print("1. Enter 1 to [bold][dodger_blue2]name[/][/] your Aquarium")
     print("2. Enter 2 to [bold][bright_green]add[/][/] test results to your Aquarium")
     print("2. Enter 3 to [bold][red1]remove[/][/] item from the list")
@@ -25,6 +28,7 @@ def create_menu(): # Function #1
     user_choice = input("\nEnter your selection: ")
     return user_choice
 
+# Variable to link the .csv file
 file_name = "results_table.csv"
 
 # if the file does not exist

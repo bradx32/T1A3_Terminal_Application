@@ -1,5 +1,6 @@
 import csv
 
+from colored import Fore, Back, Style
 
 def add_aquarium(file_name):
     results_name = input("Enter Aquarium name: ")
@@ -54,16 +55,28 @@ def view_results(file_name):
 def ideal_parameters(file_name):
     print("\nAustralian Native fish ideal parameters")
     ideal_parameters = {
-        "pH": "6.5 - 7.5",
-        "Ammonia": "0 - 0.25ppm",
-        "Nitrite": "0ppm",
-        "Nitrate": "0-40ppm",
-        "Temperature": "24 - 26deg",
-        "GH": "50-150ppm"
+        "pH": "6.5 - 7.5 ",
+        "Ammonia": "0 - 0.25ppm ",
+        "Nitrite": "0ppm ",
+        "Nitrate": "0-40ppm ",
+        "Temperature": "24 - 26deg ",
+        "GH": "50-150ppm "
     }
+
     for key, value in ideal_parameters.items():
-        print(f"{key}: {value}")
-    print("\nPlease note above is general information only as all fish are different")
+        if key == "pH":
+            print(f"{Fore.BLACK}{Back.rgb(112,182,162)}{key}: {value}{Style.reset}")
+        elif key == "Ammonia":
+            print(f"{Fore.BLACK}{Back.rgb(255,255,173)}{key}: {value}{Style.reset}")
+        elif key == "Nitrite":
+            print(f"{Fore.BLACK}{Back.rgb(130,210,222)}{key}: {value}{Style.reset}")
+        elif key == "Nitrate":
+            print(f"{Fore.BLACK}{Back.rgb(231,109,43)}{key}: {value}{Style.reset}")
+        else:
+            print(f"{key}: {value}")
+
+    print("Colours above relate to water chemical test results as per 'Freshwater Master Test Kit' guidelines")
+    print("\nPlease note above is general information only as all fish can differ.")
     print()
 
 
