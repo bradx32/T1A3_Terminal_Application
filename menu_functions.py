@@ -52,7 +52,7 @@ def view_results(file_name):
 
 
 def ideal_parameters(file_name):
-    print("\nAustralian Native fish general ideal parameters")
+    print("\nAustralian Native fish ideal parameters")
     ideal_parameters = {
         "pH": "6.5 - 7.5",
         "Ammonia": "0 - 0.25ppm",
@@ -63,6 +63,7 @@ def ideal_parameters(file_name):
     }
     for key, value in ideal_parameters.items():
         print(f"{key}: {value}")
+    print("\nPlease note above is general information only as all fish are different")
     print()
 
 
