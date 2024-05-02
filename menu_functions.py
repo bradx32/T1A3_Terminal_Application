@@ -9,7 +9,7 @@ def add_aquarium(file_name):
         writer.writerow([results_name])
 
 def add_test_results(file_name):
-    print("For example Date:, Ph:, Ammonia: , Nitrite: or Nitrate: ")
+    print("For example Date:, pH:, Ammonia: , Nitrite: or Nitrate: ")
     results_name = input("Enter test results: ")
     with open(file_name, "a") as f:
         writer = csv.writer(f)
@@ -53,7 +53,7 @@ def view_results(file_name):
 
 
 def ideal_parameters(file_name):
-    print("\nAustralian Native fish ideal parameters")
+    print("\nAustralian native freshwater fish ideal parameters")
     ideal_parameters = {
         "pH": "6.5 - 7.5 ",
         "Ammonia": "0 - 0.25ppm ",
@@ -62,7 +62,6 @@ def ideal_parameters(file_name):
         "Temperature": "24 - 26deg ",
         "GH": "50-150ppm "
     }
-
     for key, value in ideal_parameters.items():
         if key == "pH":
             print(f"{Fore.BLACK}{Back.rgb(112,182,162)}{key}: {value}{Style.reset}")
@@ -75,7 +74,7 @@ def ideal_parameters(file_name):
         else:
             print(f"{key}: {value}")
 
-    print("Colours above relate to water chemical test results as per 'Freshwater Master Test Kit' guidelines")
+    print("\nColours above relate to water chemical test results as per 'Freshwater Master Test Kit' guidelines.")
     print("\nPlease note above is general information only as all fish can differ.")
     print()
 
