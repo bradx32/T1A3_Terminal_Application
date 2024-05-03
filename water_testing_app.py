@@ -5,16 +5,18 @@ import os.path
 # Lesson video at 2:34:00 watch from here if needing help
 from colored import Fore, Back, Style
 from rich import print # this overides the 'print' and gives colours to numbers and strings
-from rich.text import Text
+from rich.text import Text # Allows for text styling such as bold and colours
 
 
 # Imports of our own fucntiones
 from menu_functions import add_aquarium, add_test_results, remove_results, view_results, ideal_parameters
 
+
 # Title and terminal brief
 print("\n[bold]Welcome to the Aquarium Water Testing results application[/bold] \U0001F9EA \U0001F41F ")
 print("[bold]Here you can name your Aquarium, store, view and remove test results.[/]")
 print("\n")
+
 
 # Function overview and user guide
 def create_menu():  
@@ -22,14 +24,16 @@ def create_menu():
     print("2. Enter 2 to [bold][bright_green]add[/][/] test results to your Aquarium")
     print("2. Enter 3 to [bold][red1]remove[/][/] item from the list")
     print("4. Enter 4 to [bold][bright_cyan]view[/][/] Water Testing results")
-    print("5. Enter 5 to [bold][yellow]check[/][/] ideal Aquariuam parameters")
+    print("5. Enter 5 to [bold][yellow]check[/][/] ideal Aquarium parameters")
     print("5. Enter 6 to [bold][bright_white]exit[/] application")
 
     user_choice = input("\nEnter your selection: ")
     return user_choice
 
+
 # Variable to link the .csv file
 file_name = "results_table.csv"
+
 
 # if the file does not exist
 if (not os.path.isfile(file_name)):
@@ -42,8 +46,11 @@ if (not os.path.isfile(file_name)):
     # Close the file
     aquarium_name_file.close()
 
+
 choice = ""
 
+
+# Functions loop
 while choice != "6":
     choice = create_menu()
 
@@ -68,5 +75,6 @@ while choice != "6":
         print("Please only enter the options shown above.")
 
 
+# Prints on termination "6" at end of application
 print("Thank you for using the Water Testing application")
 

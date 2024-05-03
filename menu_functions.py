@@ -1,12 +1,15 @@
 import csv
 
+
 from colored import Fore, Back, Style
+
 
 def add_aquarium(file_name):
     results_name = input("Enter Aquarium name: ")
     with open(file_name, "a") as f:
         writer = csv.writer(f)
         writer.writerow([results_name])
+
 
 def add_test_results(file_name):
     print("For example Date:, pH:, Ammonia: , Nitrite: or Nitrate: ")
@@ -74,21 +77,8 @@ def ideal_parameters(file_name):
         else:
             print(f"{key}: {value}")
 
+
     print("\nColours above relate to water chemical test results as per 'Freshwater Master Test Kit' guidelines.")
     print("\nPlease note above is general information only as all fish can differ.")
     print()
 
-
-# def mark_results(file_name):
-#     results_name = input("Enter the todo name that you want to mark as complete: ")
-#     todo_lists = []
-#     with open(file_name, "r") as f:
-#         reader = csv.reader(f)
-#         for row in reader:
-#             if (results_name != row[0]):
-#                 todo_lists.append(row)
-#             else:
-#                 todo_lists.append(row[0], "True")
-#     with open(file_name, "w") as f:
-#         writer = csv.writer(f)
-#         writer.writerows(todo_lists)
