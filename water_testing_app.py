@@ -23,24 +23,24 @@ def create_menu():
     print("1. Enter 1 to [bold][dodger_blue2]name[/][/] your Aquarium")
     print("2. Enter 2 to [bold][bright_green]add[/][/] test results to your Aquarium")
     print("2. Enter 3 to [bold][red1]remove[/][/] item from the list")
-    print("4. Enter 4 to [bold][bright_cyan]view[/][/] Water Testing results")
+    print("4. Enter 4 to [bold][bright_cyan]view[/][/] water testing results")
     print("5. Enter 5 to [bold][yellow]check[/][/] ideal Aquarium parameters")
     print("5. Enter 6 to [bold][bright_white]exit[/] application")
 
-    user_choice = input("\nEnter your selection: ")
-    return user_choice
+    USER_CHOICE = input("\nEnter your selection: ")
+    return USER_CHOICE
 
 
-# Variable to link the .csv file
-file_name = "results_table.csv"
+# Variable to link the .csv file. This is a constant naming convention so Capitals were used.
+FILE_NAME = "results_table.csv"
 
 
 # if the file does not exist
-if (not os.path.isfile(file_name)):
+if (not os.path.isfile(FILE_NAME)):
     # Display message if file does not exist, gives user more information.
     print("A list file was created as it did not exist, this will store your Aquarium name and results")
     # Create the file
-    aquarium_name_file = open(file_name, "w")
+    aquarium_name_file = open(FILE_NAME, "w")
     # Enter the headings into the file
     aquarium_name_file.write("Aquarium Name\n")
     # Close the file
@@ -55,19 +55,19 @@ while choice != "6":
     choice = create_menu()
 
     if (choice == "1"):
-        add_aquarium(file_name)
+        add_aquarium(FILE_NAME)
         
     elif (choice == "2"):
-        add_test_results(file_name)
+        add_test_results(FILE_NAME)
 
     elif (choice == "3"):
-        remove_results(file_name)
+        remove_results(FILE_NAME)
 
     elif (choice == "4"):
-        view_results(file_name)
+        view_results(FILE_NAME)
     
     elif(choice == "5"):
-        ideal_parameters(file_name)
+        ideal_parameters(FILE_NAME)
 
     elif (choice == "6"):
         print("You entered 6.")
