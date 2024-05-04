@@ -4,27 +4,27 @@ import csv
 from colored import Fore, Back, Style
 
 
-def add_aquarium(file_name):
+def add_aquarium(FILE_NAME):
     results_name = input("Enter Aquarium name: ")
-    with open(file_name, "a") as f:
+    with open(FILE_NAME, "a") as f:
         writer = csv.writer(f)
         writer.writerow([results_name])
 
 
-def add_test_results(file_name):
+def add_test_results(FILE_NAME):
     print("For example Date:, pH:, Ammonia: , Nitrite: or Nitrate: ")
     results_name = input("Enter test results: ")
-    with open(file_name, "a") as f:
+    with open(FILE_NAME, "a") as f:
         writer = csv.writer(f)
         writer.writerow([results_name])
 
 
-def remove_results(file_name):
+def remove_results(FILE_NAME):
     results_name = input("Enter the results name that you want to delete: ")
     # Create a new list
     results_lists = []
     # Put all the previous items into the list except the one they want to delete
-    with open(file_name, "r") as f:
+    with open(FILE_NAME, "r") as f:
         reader = csv.reader(f)
         is_exist = False
         for row in reader:
@@ -36,14 +36,14 @@ def remove_results(file_name):
         print("No item with that name exists.")
 
     # Write the enter aquarium_list.csv file with this new list
-    with open(file_name, "w") as f:
+    with open(FILE_NAME, "w") as f:
         writer = csv.writer(f)
         writer.writerows(results_lists)
 
 
-def view_results(file_name):
+def view_results(FILE_NAME):
     try:
-        with open(file_name, "r") as f: 
+        with open(FILE_NAME, "r") as f: 
             reader = csv.reader(f)
             reader.__next__()
             for row in reader:
@@ -52,10 +52,10 @@ def view_results(file_name):
                 # Print the formatted row
                 print(row_string)
     except FileNotFoundError:
-        print("The results table doesn't exist")
+        print("The results table file does not exist")
 
 
-def ideal_parameters(file_name):
+def ideal_parameters(FILE_NAME):
     print("\nAustralian native freshwater fish ideal parameters")
     ideal_parameters = {
         "pH": "6.5 - 7.5 ",
