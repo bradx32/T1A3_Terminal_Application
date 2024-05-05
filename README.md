@@ -26,20 +26,6 @@
 
 ## R6. Develop a list of features that will be included in the application. It must include:
 
-- at least THREE features
-
-- describe each feature, providing a walkthrough of the logic of the application.
-
-
-Note: Ensure that your features above allow you to demonstrate your understanding of the following language elements and concepts:
-
-- use of variables and the concept of variable scope
-
-- loops and conditional control structures
-
-- error handling
-
-
 ### Features
 #### 1. Aquarium Water Testing Results Management: 
 -  My application allows users to manage aquarium water testing results, including naming their aquarium, adding test results, removing results, viewing results, and checking ideal aquarium parameters.
@@ -168,53 +154,55 @@ if (not os.path.isfile(FILE_NAME)):
 
 
 ### R7. Develop an implementation plan which:
-- outlines how each feature will be implemented and a checklist of tasks for each feature
-- prioritise the implementation of different features, or checklist items within a feature
-- provide a deadline, duration or other time indicator for each feature or checklist/checklist-item
 
-Utilise a suitable project management platform to track this implementation plan.
+## [Trello board](https://trello.com/b/LhNt6Gmr/terminal-application) 
 
-Provide screenshots/images and/or a reference to an accessible project management platform used to track this implementation plan. 
+### Overall Trello board
 
+![trello board main](docs/screenshots/Trello/trello_board_main.jpg)
 
-> Your checklists for each feature should have at least 5 items.
+### Function 1
+![add_aquarium](docs/screenshots/Trello/Function_1.jpg)
+
+### Function 2
+![add_results](docs/screenshots/Trello/Function_2.jpg)
+
+### Function 3
+![remove_results](docs/screenshots/Trello/Function_3.jpg)
+
+### Function 4
+![view_results](docs/screenshots/Trello/Function_4.jpg)
+
+### Function 5
+![ideal_parameters](docs/screenshots/Trello/Function_5.jpg)
+
 
 ### R8. Design help documentation which includes a set of instructions which accurately describe how to use and install the application.
 
+## Help Documentation 
 
-## Code Requirements
+See the [help_documentation.md](help_documentation.md) file for instructions on how to install and use the application
 
-### R9. Implement features in the software development plan you have designed. You must utilise a range of programming concepts and structures using Python such as:
+## Installing Application:
+- Open your terminal
+- python3 --version (check your version)
+    - If not installed, download from [official website](https://www.python.org/downloads/)
+- Navigate to application directory
+- Execute the ./run.sh provided which should then run the following
+    - Sets up a virtual environment .venv.
+    - Activates the virtual environment.
+    - Installs required Python packages (colored and Rich) using pip3.
+    - Runs the water_testing_app.py application.
+    
 
-- variables and variable scope
+## Dependencies Required:
+- Colored 2.2.4
+- Rich
 
-- loops and conditional control structures
+## System Requirements:
+- Windows/Linux/MacOS
+- Python version 3.10.12 used on this application. Although only Python 3.9 and above is required.  
+<br>
+<br>
 
-- write and utilise simple functions
-
-- error handling
-
-- input and output
-
-- importing a Python package
-
-- using functions from a Python package
-
-
-### R10. Apply DRY (Don’t Repeat Yourself) coding principles to all code produced.
-
-### R11. Apply all style and conventions for the programming language consistently to all code produced.
-
-### R12. Creates an application which runs without error and has features that are consistent with the development plan.
-
-### R13. Utilise source control throughout the development of the application by:
-
-- making regular commits (at least 20 commits) with a commit message that summarises the changes
-
-- pushing all commits to a remote repository
-
-### R14. Utilise developer tools to facilitate the execution of the application:
-
-For example,
-
-- writing a script which turns the application into an executable
+# Thank you for using the Water Testing Application!

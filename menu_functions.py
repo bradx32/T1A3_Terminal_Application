@@ -35,7 +35,7 @@ def remove_results(FILE_NAME):
     if not is_exist:
         print("No item with that name exists.")
 
-    # Write the enter aquarium_list.csv file with this new list
+    # Write the enter aresults_table.csv file with this new list
     with open(FILE_NAME, "w") as f:
         writer = csv.writer(f)
         writer.writerows(results_lists)
@@ -47,9 +47,9 @@ def view_results(FILE_NAME):
             reader = csv.reader(f)
             reader.__next__()
             for row in reader:
-                # Concatenate the elements of each row into a single string
+                # Concatenates the elements of each row into a single string
                 row_string = "".join(row)
-                # Print the formatted row
+                # Prints the formatted row
                 print(row_string)
     except FileNotFoundError:
         print("The results table file does not exist")
