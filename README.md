@@ -164,7 +164,7 @@ if (not os.path.isfile(FILE_NAME)):
 #### 4. Text Styling with packages feature: 
 - The use of external packages like rich and colored has given the option for text styling, including colors and formatting, this enhances the visual look of the application, making it more pleasing to interact with. The option 5 'check ideal Aquarium parameters', shows a list of parameters with corresponding background colour to each test result, which is how the water test colour will appear in testing according to the 'Freshwater Master Test Kit' guidelines.
 
-![check ideal Aquarium parameters](image.png)
+![check ideal Aquarium parameters](docs/screenshots/check_parameters.png)
 
 
 ### R7. Develop an implementation plan which:
